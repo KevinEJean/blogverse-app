@@ -21,7 +21,7 @@ services:
   backend:
     image: KevinEJean/tp2-2233405-blogverse-backend:${BACKEND_VERSION}
     build:
-      context: ./2233405-blogverse-backend
+      context: ./backend
       dockerfile: Dockerfile
     restart: unless-stopped
     environment:
@@ -44,7 +44,7 @@ services:
   frontend:
     image: KevinEJean/tp2-2233405-blogverse-frontend:${FRONTEND_VERSION}
     build:
-      context: ./2233405-blogverse-frontend
+      context: ./frontend
       dockerfile: Dockerfile
       args:
         VITE_API_URL: ${VITE_API_URL}
