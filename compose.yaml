@@ -19,7 +19,7 @@ services:
       retries: 5
     
   backend:
-    image: KevinEJean/tp2-2233405-blogverse-backend:${BACKEND_VERSION}
+    image: kevinejean/tp2-2233405-blogverse-backend:${BACKEND_VERSION}
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -42,7 +42,7 @@ services:
         condition: service_healthy
 
   frontend:
-    image: KevinEJean/tp2-2233405-blogverse-frontend:${FRONTEND_VERSION}
+    image: kevinejean/tp2-2233405-blogverse-frontend:${FRONTEND_VERSION}
     build:
       context: ./frontend
       dockerfile: Dockerfile
